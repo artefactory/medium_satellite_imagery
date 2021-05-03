@@ -1,31 +1,18 @@
-# Artefact's Boilerplate for  DataScience Python projects 
+# Medium Satellite Imagery 
 
-This repository is a boilerplate repository designed to be used when starting a new project to help kickstart things easily.
+This repository is meant to allow reproducibility of the steps provided in an [article on 
+preprocessing satellite imagery for machine learning application](https://medium.com/artefact-engineering-and-data-science/LINK_TO_ARTICLE) 
+showcased in the [Artefact tech medium](https://medium.com/artefact-engineering-and-data-science)
+ 
+ 
+All the code is included in `notebooks/preprocessing_satellite_imagery.ipynb`
 
-To create a new repository based on this one please use the "create from a template" feature (see [Github's documentation](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)).
+Before running the notebook, do the following steps first:
 
-There will be more than you need for your project so feel free to drop what you don't need after you initialized your repo with this one.
+- run `pip install requirements.txt`
+- create a geojson file of the zone you want a satellite imagery of and save it in `data/target_zone.geojson`
+- create an account at [Coppernicus Open Access Hub](https://scihub.copernicus.eu/dhus/#/home). 
+Write the username and the password in a json file and save it in `secrets/sentinel_api_credentials.json`.
+Format: `{"username": "XXXX", "password": "XXXX"}`
 
-## Organisation of the repo
 
-### Folders
-
-    The folder name should be self sufficient, however some extra details:
-    - bin: This is the folder where you store your executable, that could be main python scripts, or bash ones.
-    - lib: this is where you store the main libraries used within your project. 
-    - data: Separated in 3 folder to start: Raw data, intermediate, and processed.
-    - doc: Sphinx template to generate code documentation
-    - references: all the written documentation (functional, features) that is not sphinx generated 
-
-### Requirements
-
-You should always have requirements to your project to ensure reproductibility.
-
-Requirements are often a pain, between the one that you really use, and all the dependencies.
-This repo advise you to use [Pip-tools](https://github.com/jazzband/pip-tools).
-
-To do so, put your requirements in the requirements.in, then run 
-
- ` pip-compile requirements.in`
-
- This will generate automatically the requirements.txt with all the required dependencies.
