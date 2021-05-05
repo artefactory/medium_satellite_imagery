@@ -1,7 +1,7 @@
 # Medium Satellite Imagery 
 
 This repository is meant to allow reproducibility of the steps provided in an [article on 
-preprocessing satellite imagery for machine learning application](https://medium.com/artefact-engineering-and-data-science/LINK_TO_ARTICLE) 
+preprocessing satellite imagery for machine learning application](https://medium.com/artefact-engineering-and-data-science/leveraging-satellite-imagery-for-machine-learning-computer-vision-applications-d22143f72d94) 
 showcased in the [Artefact tech medium](https://medium.com/artefact-engineering-and-data-science)
  
  
